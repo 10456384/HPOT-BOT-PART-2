@@ -1,0 +1,35 @@
+
+
+So this is just a quick explanation of how my HPOT BOT works, i tried to keep the structure neat but also simple so that it runs properly as a C# console app.
+
+The project starts in the Main method like usual, where i first clear the screen and then display an ascii logo for the bot. I called it HPOT BOT which stands for "Helpful Protecter of technology Bot", which I thought sounds cool and explains what it does.
+
+Then the user is asked to enter they’re name (sorry if grammar bad), and the bot greets them personally using their name, which I store in a variable called `userName`. I wanted it to feel more like a conversation, not just a boring terminal app.
+
+After that, I explain what the bot can do. The menu shows 5 different topics related to cybersecurity:
+1. Phishing Awareness
+2. Password Safety
+3. Safe Browsing
+4. Social Media Safety
+5. Cyber Hygiene Tips
+
+Once the user picks a topic either by number or typing the name, the bot will show a defenition of the topic first and then give some safety tips. For example, it says something like "John, phishing is when someone tries to trick you into sharing personal info..."
+
+I made sure that the answers and intro always stay visible by never using Console.Clear after the start. I learned that users can get confused when the screen refreshes too much and you lose context.
+
+I also added a list called `chatHistory` which keeps track of everything the user and bot said. It makes it more like a scrollable conversation. Every time a question is answered, it logs the user choice and the bot response into that list.
+
+The menu and welcome text are printed every time the user makes a new choice so they don’t forget what to choose next.
+
+There’s a few helper methods like:
+- `DisplayOpeningLogo()` – shows the ASCII title
+- `DisplayChatbotMenu()` – shows the main options
+- `DisplayChatHistory()` – shows everything that’s been said so far
+- Plus methods like `ProvidePhishingInfo()` which prints the actual info
+
+I also made the bot exit cleanly if the user types “0” any time during the menu input.
+
+I know it could maybe be cleaner with classes or objects but for now I just tried to keep it simple and easy to read.
+
+
+
